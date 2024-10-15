@@ -2,7 +2,7 @@ Manager.py
 
 main()
 
-   Main in the second py file provided by andy but it makes hero and monster with the properties from the tbc.character() class
+Main in the second py file provided by andy but it makes hero and monster with the properties from the tbc.character() class
 
    Also prints the stats
 
