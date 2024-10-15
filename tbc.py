@@ -45,7 +45,7 @@ class fight(object):
                         self.player2.hitPoints -= totalDmgplr1
                     else:
                         print(f"{self.player2.name} has no armor")
-                        self.player2.hitPoints - rollHitPlayer1Dmg
+                        self.player2.hitPoints -= rollHitPlayer1Dmg
                 elif rollHitPlayer2 < self.player2.hitChance:
                     print(f"{self.player2.name} hit {self.player1.name}...") 
                     rollHitPlayer2Dmg = random.randint(1, self.player2.maxDamage)
@@ -54,6 +54,9 @@ class fight(object):
                         print(f"{self.player1.name} armor can absorb {self.player1.armor}")
                         totalDmgplr2 = rollHitPlayer2Dmg - self.player1.armor
                         self.player1.hitPoints -= totalDmgplr2
+                    else:
+                        print(f"{self.player1.name} has no armor")
+                        self.player1.hitPoints -= rollHitPlayer2Dmg
             print(f"{self.player1.name}: {self.player1.hitPoints} HP")
             print(f"{self.player2.name}: {self.player2.hitPoints} HP")
             if self.player1.hitPoints <= 0:
