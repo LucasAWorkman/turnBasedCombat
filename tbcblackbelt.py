@@ -28,13 +28,12 @@ class inventory(object):
         self.file = "inventory.json"
         self.inv = self.loading() 
 
-        # this doesnt actually work unless inventory.json is an already made json file with a dict that has a key named "items", i tried a few ways to get around this but a different error would happen of the json file clearing on manager run
     def saving(self):
         with open("inventory.json", "w") as filefilefile:
             data = json.dump(self.inv, filefilefile, indent=3)
         return data
     def loading(self):
-        if os.path.exists(self.file):
+        if os.path.exists(self.file): # had to look up how to figure out the error i was having, as it was originally the json deleting its data on run, then i got to this resolution without the os but a new error would occur if inventory.json wasnt already made, but i found out os is very helpful for finding if a file exists
             with open("inventory.json", "r") as filefilefile:
                 d = json.load(filefilefile) 
                 return d
