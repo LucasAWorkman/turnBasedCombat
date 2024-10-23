@@ -89,7 +89,7 @@ class fight(object):
                         print(f"{self.player2.name} armor can absorb {self.player2.armor}")
                         totalDmgplr1 = rollHitPlayer1Dmg - self.player2.armor
                         if totalDmgplr1 < 0:
-                            totalDmgplr1
+                            totalDmgplr1 = 0
                         self.player2.hitPoints -= totalDmgplr1
                     else:
                         print(f"{self.player2.name} has no armor")
@@ -102,7 +102,7 @@ class fight(object):
                         print(f"{self.player1.name} armor can absorb {self.player1.armor}")
                         totalDmgplr2 = rollHitPlayer2Dmg - self.player1.armor
                         if totalDmgplr2 < 0:
-                            totalDmgplr2
+                            totalDmgplr2 = 0
                         self.player1.hitPoints -= totalDmgplr2
                     else:
                         print(f"{self.player1.name} has no armor")
